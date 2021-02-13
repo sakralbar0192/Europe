@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html class = "page" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.min.css">
+  <title>Document</title>
+</head>
+<body class="page-body">
+  <header class="page-body__page-header page-header">
+    <nav class="page-header__main-nav main-nav burger-menu">
+      <button class="main-nav__button button burger-menu__toggle">
+        <span class="burger-menu__toggle-caption burger-menu__toggle-caption--open burger-menu__toggle-caption--current">Открыть меню</span>
+        <span class="burger-menu__toggle-caption burger-menu__toggle-caption--close">Закрыть меню</span>
+      </button>
+      <ul class="main-nav__list burger-menu__nav">
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">об отеле</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">номера и цены</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">мероприятия</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">контакты</a>
+        </li>
+      </ul>
+    </nav>
+    <a href="tel: +7 (495) 005-61-59" class="page-header__tel">+7 (495) 005-61-59</a>
+  </header>
+  <main class="page-body__page-main page-main">
+    <h1 class="visually-hidden">отель заповедник Лесное</h1>
+    <section class="page-main__logo logo">
+      <p class="logo__text logo__text--top">отель заповедник</p>
+      <div class="logo__img-wrapper">
+        <img class="logo__img logo__img--one" src="img/logo-part1.png" alt="логотип" height="331" width="277">
+        <img class="logo__img logo__img--two" src="img/logo-part2.png" alt="логотип" height="108" width="518">
+      </div>
+        <p class="logo__text logo__text--bottom">премиальный отдых в подмосковье</p>
+    </section>
+    <section class="page-main__main-suggestion main-sugestion">
+      <div class="main-suggestion__wrapper">
+        <p class="main-suestion__price-info">
+          <span class="main-suestion__top-text">от</span>
+          <span class="main-suestion__price">5 500 &#8381;</span>
+          <span class="main-suestion__bottom-text">в сутки</span>
+        </p>
+        <p class="main-suestion__info">
+          4х разовое питание и all inclusive. Собственное подсобное хозяйство, бассейн, баня, конный двор<br/>и контактный зоопарк.
+        </p>
+      </div>
+    </section>
+    <form class="page-main__order-form order-form" action = "#" method = "get">
+      <div class="order-form__wrapper">
+        <h2 class="order-form__title">Бронирование номеров</h2>
+        <div class="order-form__inner-wrapper">
+          <label class="order-form__label order-form__label--date">Заезд
+            <input class="order-form__input order-form__input--date" type="text" placeholder="04.03.2019">
+          </label>
+          <label class="order-form__label order-form__label--date">Выезд
+            <input class="order-form__input order-form__input--date" type="text" placeholder="04.03.2019">
+          </label>
+          <label class="order-form__label order-form__label--guests">Гости
+            <input class="order-form__input order-form__input--guests" type="text" placeholder="1">
+          </label>
+        </div>
+          <buton class="order-form__button button">Найти номер</buton>
+      </div>
+    </form>
+  </main>
+  <section class="page-body__page-background page-background">
+    <img class="page-background__img" src="img/deer.png" alt="Олень" width="963" height="1185"/>
+  </section>
+  <script src="js/menu.js"></script>
+</body>
+</html>
