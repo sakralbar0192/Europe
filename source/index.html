@@ -1,79 +1,127 @@
 <!DOCTYPE html>
-<html class = "page" lang="en">
+<html class="page" lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Европа</title>
+  <link rel="preload" href="/fonts/montserrat-v15-cyrillic-regular.woff2" as="font">
+  <link rel="preload" href="/fonts/montserrat-v15-cyrillic-500.woff2" as="font">
+  <link rel="preload" href="/fonts/montserrat-v15-cyrillic-600.woff2" as="font">
+  <link rel="preload" href="/fonts/montserrat-v15-cyrillic-700.woff2" as="font">
   <link rel="stylesheet" href="css/styles.min.css">
-  <title>Document</title>
 </head>
 <body class="page-body">
-  <header class="page-body__page-header page-header">
-    <nav class="page-header__main-nav main-nav burger-menu">
-      <button class="main-nav__button button burger-menu__toggle">
-        <span class="burger-menu__toggle-caption burger-menu__toggle-caption--open burger-menu__toggle-caption--current">Открыть меню</span>
-        <span class="burger-menu__toggle-caption burger-menu__toggle-caption--close">Закрыть меню</span>
-      </button>
-      <ul class="main-nav__list burger-menu__nav">
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link">об отеле</a>
+  <header class="main-header">
+    <a href="#" class="main-header__logo">
+      <img src="img/logo.svg" class="main-header__logo-img" alt="Way" width="57" height="22">
+    </a>
+    <nav class="main-header__main-nav">
+      <div class="main-header__main-nav-button-wrapper">
+        <button class="main-header__main-nav-button" type="button"></button>
+      </div>
+      <ul class="main-header__main-nav-list">
+        <li class="main-header__main-nav-list-item">
+          <a href="#" class="main-header__main-nav-link">О путешествии</a>
         </li>
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link">номера и цены</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link">мероприятия</a>
-        </li>
-        <li class="main-nav__item">
-          <a href="#" class="main-nav__link">контакты</a>
+        <li class="main-header__main-nav-list-item">
+          <a href="#" class="main-header__main-nav-link">Цены</a>
         </li>
       </ul>
+      <a href="tel:+7(499)-784-684-46" class="main-header__main-nav-link main-header__main-nav-link--tel">
+        <svg class="main-header__tel-svg" width="30" height="30">
+          <use xlink:href="img/sprite.svg#ico-phone"></use>
+        </svg>
+        +7 (499) -784-684-46</a>
     </nav>
-    <a href="tel: +7 (495) 005-61-59" class="page-header__tel">+7 (495) 005-61-59</a>
+    <div class="main-header__hero-block">
+      <picture>
+        <source type="image/webp" media="(max-width: 767px)" srcset="img/hero-image-mobile.webp 1x, img/hero-image-mobile@2x.webp 2x">
+        <source type="image/webp" media="(max-width: 1023px)" srcset="img/hero-image-tablet.webp 1x, img/hero-image-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/hero-image-desktop.webp 1x, img/hero-image-desktop@2x.webp 2x">
+        <source media="(max-width: 767px)" srcset="img/hero-image-mobile 1x, img/hero-image-mobile@2x.jpg 2x">
+        <source media="(max-width: 1023px)" srcset="img/hero-image-tablet.jpg 1x, img/hero-image-tablet@2x.jpg 2x">
+        <img class="main-header__hero-image" src="img/hero-image-desktop.jpg" srcset="img/hero-image-desktop@2x.jpg 2x" width="1920" height="860" alt="Горы Европы">
+      </picture>
+    </div>
+    <div class="main-header__text-block">
+      <h1 class="main-header__title">Путешествие по Европе</h1>
+      <p class="main-header__text">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
+      <a href="#" class="main-header__main-nav-link main-header__main-nav-link--hero-block-button button">смотреть тур</a>
+    </div>
   </header>
-  <main class="page-body__page-main page-main">
-    <h1 class="visually-hidden">отель заповедник Лесное</h1>
-    <section class="page-main__logo logo">
-      <p class="logo__text logo__text--top">отель заповедник</p>
-      <div class="logo__img-wrapper">
-        <img class="logo__img logo__img--one" src="img/logo-part1.png" alt="логотип" height="331" width="277">
-        <img class="logo__img logo__img--two" src="img/logo-part2.png" alt="логотип" height="108" width="518">
-      </div>
-        <p class="logo__text logo__text--bottom">премиальный отдых в подмосковье</p>
+  <main class="page-main">
+    <section class="page-main__places places">
+      <h2 class="places__title">Места посещения</h2>
+      <p class="places__text">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
+      <ul class="places__list">
+        <li class="places__list-item place-card">
+          <a href="#" class="place-card__link">
+            <div class="place-card__image-wrapper">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/greece-tablet-mobile.webp 1x, img/greece-tablet-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="img/greece-desktop.webp 1x, img/greece-desktop@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/greece-tablet-mobile.jpg 1x, img/greece-tablet-mobile@2x.jpg 2x">
+                <img class="place-card__image" src="img/greece-desktop.jpg" srcset="img/greece-desktop@2x.jpg 2x" width="350" height="430" alt="Греция">
+              </picture>
+            </div>
+            <p class="place__name">Греция</p>
+          </a>
+        </li>
+        <li class="places__list-item place-card">
+          <a href="#" class="place-card__link">
+            <div class="place-card__image-wrapper">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/albania-tablet-mobile.webp 1x, img/albania-tablet-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="img/albania-desktop.webp 1x, img/albania-desktop@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/albania-tablet-mobile.jpg 1x, img/albania-tablet-mobile@2x.jpg 2x">
+                <img class="place-card__image" src="img/albania-desktop.jpg" srcset="img/albania-desktop@2x.jpg 2x" width="350" height="430" alt="Албания">
+              </picture>
+            </div>
+            <p class="place__name">Албания</p>
+          </a>
+        </li>
+        <li class="places__list-item place-card">
+          <a href="#" class="place-card__link">
+            <div class="place-card__image-wrapper">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/macedonia-tablet-mobile.webp 1x, img/macedonia-tablet-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="img/macedonia-desktop.webp 1x, img/macedonia-desktop@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/macedonia-tablet-mobile.jpg 1x, img/macedonia-tablet-mobile@2x.jpg 2x">
+                <img class="place-card__image" src="img/macedonia-desktop.jpg" srcset="img/macedonia-desktop@2x.jpg 2x" width="350" height="430" alt="Македония">
+              </picture>
+            </div>
+            <p class="place__name">Македония</p>
+          </a>
+        </li>
+        <li class="places__list-item place-card">
+          <a href="#" class="place-card__link">
+            <div class="place-card__image-wrapper">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/montenegro-tablet-mobile.webp 1x, img/montenegro-tablet-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="img/montenegro-desktop.webp 1x, img/montenegro-desktop@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/montenegro-tablet-mobile.jpg 1x, img/montenegro-tablet-mobile@2x.jpg 2x">
+                <img class="place-card__image" src="img/montenegro-desktop.jpg" srcset="img/montenegro-desktop@2x.jpg 2x" width="350" height="430" alt="Черногория">
+              </picture>
+            </div>
+            <p class="place__name">Черногория</p>
+          </a>
+        </li>
+        <li class="places__list-item place-card">
+          <a href="#" class="place-card__link">
+            <div class="place-card__image-wrapper">
+              <picture>
+                <source type="image/webp" media="(max-width: 1023px)" srcset="img/croatia-tablet-mobile.webp 1x, img/croatia-tablet-mobile@2x.webp 2x">
+                <source type="image/webp" srcset="img/croatia-desktop.webp 1x, img/croatia-desktop@2x.webp 2x">
+                <source media="(max-width: 1023px)" srcset="img/croatia-tablet-mobile.jpg 1x, img/croatia-tablet-mobile@2x.jpg 2x">
+                <img class="place-card__image" src="img/croatia-desktop.jpg" srcset="img/croatia-desktop@2x.jpg 2x" width="350" height="430" alt="Хорватия">
+              </picture>
+            </div>
+            <p class="place__name">Хорватия</p>
+          </a>
+        </li>
+      </ul>
     </section>
-    <section class="page-main__main-suggestion main-sugestion">
-      <div class="main-suggestion__wrapper">
-        <p class="main-suestion__price-info">
-          <span class="main-suestion__top-text">от</span>
-          <span class="main-suestion__price">5 500 &#8381;</span>
-          <span class="main-suestion__bottom-text">в сутки</span>
-        </p>
-        <p class="main-suestion__info">
-          4х разовое питание и all inclusive. Собственное подсобное хозяйство, бассейн, баня, конный двор<br/>и контактный зоопарк.
-        </p>
-      </div>
-    </section>
-    <form class="page-main__order-form order-form" action = "#" method = "get">
-      <div class="order-form__wrapper">
-        <h2 class="order-form__title">Бронирование номеров</h2>
-        <div class="order-form__inner-wrapper">
-          <label class="order-form__label order-form__label--date">Заезд
-            <input class="order-form__input order-form__input--date" type="text" placeholder="04.03.2019">
-          </label>
-          <label class="order-form__label order-form__label--date">Выезд
-            <input class="order-form__input order-form__input--date" type="text" placeholder="04.03.2019">
-          </label>
-          <label class="order-form__label order-form__label--guests">Гости
-            <input class="order-form__input order-form__input--guests" type="text" placeholder="1">
-          </label>
-        </div>
-          <buton class="order-form__button button">Найти номер</buton>
-      </div>
-    </form>
   </main>
-  <section class="page-body__page-background page-background">
-    <img class="page-background__img" src="img/deer.png" alt="Олень" width="963" height="1185"/>
-  </section>
-  <script src="js/menu.js"></script>
 </body>
 </html>

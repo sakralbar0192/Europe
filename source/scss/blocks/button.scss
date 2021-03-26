@@ -1,0 +1,17 @@
+.button {
+  box-sizing: border-box;
+  padding: 31px 40px 30px;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $additional-color-one;
+  background-color: $secondary-color-one;
+
+  @media (max-width: $desktop-width) {
+    padding: 20px 40px 16px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+}

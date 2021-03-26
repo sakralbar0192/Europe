@@ -1,0 +1,9 @@
+.page-main {
+  display: grid;
+  grid-template-columns: 1fr 67.2vw 1fr;
+  padding: 200px 0;
+}
+
+.page-main__places {
+  grid-column: 2/-2;
+}

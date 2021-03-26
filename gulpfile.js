@@ -1,10 +1,11 @@
 const gulp = require("gulp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
-const less = require("gulp-less");
+const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const csso = require("postcss-csso");
+var svgstore = require("gulp-svgstore")
 const htmlmin = require("gulp-htmlmin");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
@@ -15,10 +16,10 @@ const sync = require("browser-sync").create();
 // Styles
 
 const styles = () => {
-  return gulp.src("source/less/style.less")
+  return gulp.src("source/scss/style.scss")
     .pipe(plumber())
     .pipe(sourcemap.init())
-    .pipe(less())
+    .pipe(sass())
     .pipe(postcss([
       autoprefixer(),
       csso()
@@ -40,7 +41,7 @@ const html = () => {
   .pipe(sync.stream());
 }
 
-exports.html = html
+exports.html = html;
 
 //Scripts
 
@@ -76,13 +77,23 @@ const createWebp = () => {
 
 exports.createWebp = createWebp;
 
+//Sprite
+
+const sprite = () => {
+  return gulp.src("source/img/ico-*.svg")
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"));
+}
+
+exports.sprite = sprite;
+
 //Copy
 
 const copy = () => {
   return gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
-    "source/img/**/*.{jpg,png}"
   ],
 {
   base: "source"
@@ -99,15 +110,6 @@ const clean = () => {
 }
 
 exports.clean = clean;
-
-
-//CleanImg
-
-const cleanImg = () => {
-  return del("build/img")
-}
-
-exports.cleanImg = cleanImg
 
 // Server
 
@@ -128,10 +130,9 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  gulp.watch("source/scss/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series("html"), sync.reload());
   gulp.watch("source/js/*.js", gulp.series("scripts"), sync.reload());
-  gulp.watch("source/img", gulp.series(cleanImg, copy), sync.reload());
 }
 
 //Build
@@ -142,7 +143,8 @@ const build = gulp.series (
     html,
     copy,
     images,
-    createWebp
+    createWebp,
+    sprite
   ),
 )
 
@@ -154,8 +156,10 @@ exports.default = gulp.series(
     styles,
     html,
     copy,
+    images,
     scripts,
     createWebp,
+    sprite
   ),
   gulp.series(
     server,
