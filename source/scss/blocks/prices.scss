@@ -1,0 +1,149 @@
+.prices {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding: 57px 45px 0;
+
+  @media (max-width: $desktop-width) {
+    flex-direction: column;
+    padding: 40px 35px 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 6px 0 0;
+  }
+}
+
+.prices__container {
+  max-width: 300px;
+  padding: 115px 0 50px 95px;
+
+  @media (max-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 29px;
+    max-width: 100%;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0 20px 39px;
+  }
+}
+
+.prices__title {
+  margin: 0 0 40px;
+  font-size: 55px;
+  line-height: 90px;
+  font-weight: 600;
+  color: $primari-color-two;
+
+  @media (max-width: $desktop-width) {
+    margin: 0 0 20px;
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  &::after {
+    content: "";
+    width: 175px;
+    height: 4px;
+    margin-top: 13px;
+    background-color: $secondary-color-one;
+
+    @media (max-width: $desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.prices__text {
+  margin: 0 0 60px;
+  font-size: 16px;
+  line-height: 27.2px;
+  font-weight: 400;
+  color: rgba($primari-color-two, 0.7);
+
+  @media (max-width: $desktop-width) {
+    margin: 0 0 33px;
+    text-align: center;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 0 0 18px;
+  }
+}
+
+.prices__contact-text {
+  margin: 0 0 14px;
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 500;
+  align-self: center;
+
+  @media (max-width: $desktop-width) {
+    margin: 0 0 10px;
+    font-size: 18px;
+    line-height: 34px;
+  }
+}
+
+.prices__contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.prices__tel {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400;
+  color: $additional-color-three;
+
+  @media (max-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 32px;
+    text-decoration: underline;
+    color: $secondary-color-one;
+  }
+}
+
+.prices__tel-svg {
+  margin: 0 17px 0 0;
+
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.prices__price-list {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: $desktop-width) {
+    justify-content: center;
+  }
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.tariff__button {
+  @media (max-width: $desktop-width) {
+    width: 100%;
+  }
+}
