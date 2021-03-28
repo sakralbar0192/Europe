@@ -1,5 +1,5 @@
 .tab {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
@@ -12,6 +12,10 @@
 
   @media (max-width: $tablet-width) {
     padding: 25px 0 0;
+  }
+
+  &--current {
+    display: flex;
   }
 }
 
@@ -137,6 +141,7 @@
   grid-column: 1/-1;
   grid-row: 2/-1;
   justify-self: end;
+  align-self: start;
   width: 382px;
   max-height: 367px;
   padding: 30px;

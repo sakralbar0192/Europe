@@ -1,8 +1,6 @@
 .tabs {
   display: flex;
   flex-direction: column;
-  margin: 0 0 125px;
-  padding: 25px 60px 25px;
 
   @media (max-width: $desktop-width) {
     margin: 0 0 40px;
@@ -19,13 +17,13 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0;
+  margin: 0 60px 0;
   padding: 0;
 
   &--names {
     max-width: 900px;
-    margin: 0 0 50px;
-    padding: 0 0 15px;
+    margin: 0 60px 50px;
+    padding: 25px 0 15px;
     border-bottom: 1px solid rgba($primari-color-two, 0.3);
 
     @media (max-width: $desktop-width) {
@@ -69,4 +67,20 @@
   font-weight: 500;
   letter-spacing: -0.41px;
   color: rgba($primari-color-two, 0.3);
+
+  &--current {
+    color: $secondary-color-one;
+  }
+
+  &:hover {
+    color: rgba($secondary-color-two, 0.7);
+  }
+
+  &:active {
+    color: rgba($secondary-color-two, 0.3);
+  }
+
+  &:focus {
+    outline: 1px solid $secondary-color-two;
+  }
 }

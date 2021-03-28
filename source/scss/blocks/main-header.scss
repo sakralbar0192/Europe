@@ -5,6 +5,7 @@
   column-gap: 190px;
   align-items: center;
   justify-items: center;
+  margin: 0 0 100px;
 
   @media (max-width: $tablet-width) {
     grid-template-rows: auto auto auto;
@@ -12,7 +13,7 @@
   }
 }
 
-.main-header__logo {
+.main-header__logo-wrapper {
   padding: 8px 56px 0 0;
 
   @media (max-width: $desktop-width) {
@@ -22,6 +23,20 @@
 
   @media (max-width: $tablet-width) {
     padding: 10px 0 0 16px;
+  }
+}
+
+.main-header__logo {
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
+
+  &:focus {
+    outline: 1px solid rgba($secondary-color-one, 0.7);
   }
 }
 
@@ -83,7 +98,7 @@
   }
 }
 
-.main-header__main-nav-list {
+.main-header__list {
   display: flex;
   margin: 0;
   padding: 0 15px 0 0;
@@ -93,15 +108,31 @@
   }
 }
 
-.main-header__main-nav-list-item {
+.main-header__list-item {
   padding-right: 40px;
   list-style: none;
 }
 
-.main-header__main-nav-link {
+.main-header__link {
   font-size: 14px;
   line-height: 17px;
   font-weight: 500;
+
+  &:hover {
+    color: $secondary-color-one;
+
+    .main-header__svg {
+      stroke: $secondary-color-one;
+    }
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:focus {
+    outline: 1px solid rgba($secondary-color-one, 0.7);
+  }
 
   &--tel {
     display: flex;
@@ -115,37 +146,15 @@
       display: none;
     }
   }
-
-  &--hero-block-button {
-    justify-content: space-between;
-    width: 340px;
-
-    @media (max-width: $desktop-width) {
-      width: 250px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: $tablet-width) {
-      width: 288px;
-    }
-
-    &::after {
-      content: "";
-      width: 14px;
-      height: 14px;
-      background-image: url("../../img/arrow.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-  }
 }
 
-.main-header__tel-svg {
+.main-header__svg {
   padding-right: 4px;
   fill: $additional-color-one;
+  stroke: $primari-color-one;
 }
 
-.main-header__hero-block {
+.main-header__image-block {
   grid-column: 1/-1;
   grid-row: 2/-1;
   width: 100%;
@@ -169,7 +178,7 @@
 .main-header__hero-image {
   width: 100%;
   height: auto;
-  vertical-align: top;
+  vertical-align: bottom;
 }
 
 .main-header__text-block {
@@ -240,5 +249,28 @@
     font-size: 5vw;
     line-height: 8.5vw;
     color: $primari-color-two;
+  }
+}
+
+.main-header__button {
+  justify-content: space-between;
+  width: 340px;
+
+  @media (max-width: $desktop-width) {
+    width: 250px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 288px;
+  }
+
+  &::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-image: url("../../img/arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }

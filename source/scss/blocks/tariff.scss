@@ -23,8 +23,34 @@
     margin: 0 0 25px;
   }
 
-  &--complex {
+  &:hover {
     border: 3px solid $secondary-color-one;
+
+    .tariff__title-name {
+      font-size: 28px;
+      line-height: 34px;
+      letter-spacing: normal;
+      color: $secondary-color-one;
+
+      @media (max-width: $desktop-width) {
+        font-size: 24px;
+        line-height: 34px;
+      }
+    }
+
+    .tariff__title-price {
+      color: $secondary-color-one;
+    }
+
+    .tariff__features-list {
+      border-top: 1px solid rgba($secondary-color-one, 0.5);
+    }
+
+    .tariff__feature {
+      &::before {
+        background-image: url("../../img/accent-tick.svg");
+      }
+    }
   }
 }
 
@@ -54,18 +80,6 @@
       line-height: 38px;
       letter-spacing: normal;
     }
-
-    &--complex {
-      font-size: 28px;
-      line-height: 34px;
-      letter-spacing: normal;
-      color: $secondary-color-one;
-
-      @media (max-width: $desktop-width) {
-        font-size: 24px;
-        line-height: 34px;
-      }
-    }
   }
 
   .tariff__title-price {
@@ -74,10 +88,6 @@
     font-weight: 700;
     text-align: right;
     color: rgba($primari-color-one, 0.7);
-
-    &--complex {
-      color: $secondary-color-one;
-    }
   }
 }
 
@@ -111,10 +121,6 @@
   @media (max-width: $tablet-width) {
     margin: 0 20px 18px;
   }
-
-  &--complex {
-    border-top: 1px solid rgba($secondary-color-one, 0.5);
-  }
 }
 
 .tariff__feature {
@@ -143,12 +149,6 @@
     background-image: url("../../img/tick.svg");
     background-position: center;
     background-repeat: no-repeat;
-  }
-
-  &--complex {
-    &::before {
-      background-image: url("../../img/accent-tick.svg");
-    }
   }
 }
 

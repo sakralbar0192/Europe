@@ -1,9 +1,9 @@
-.prices {
+.prices__wrapper {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;
   justify-content: flex-end;
-  padding: 57px 45px 0;
+  padding: 65px 45px 0;
 
   @media (max-width: $desktop-width) {
     flex-direction: column;
@@ -11,11 +11,12 @@
   }
 
   @media (max-width: $tablet-width) {
+    margin: 0 0 4px;
     padding: 6px 0 0;
   }
 }
 
-.prices__container {
+.prices__text-block {
   max-width: 300px;
   padding: 115px 0 50px 95px;
 
@@ -33,7 +34,7 @@
 }
 
 .prices__title {
-  margin: 0 0 40px;
+  margin: 0 0 45px;
   font-size: 55px;
   line-height: 90px;
   font-weight: 600;
@@ -113,10 +114,24 @@
     text-decoration: underline;
     color: $secondary-color-one;
   }
+
+  &:hover {
+    color: rgba($secondary-color-one, 0.7);
+  }
+
+  &:active {
+    color: rgba($secondary-color-one, 0.3);
+  }
+
+  &:focus {
+    outline: 1px solid $secondary-color-two;
+  }
 }
 
 .prices__tel-svg {
   margin: 0 17px 0 0;
+  stroke: $secondary-color-one;
+  fill: none;
 
   @media (max-width: $desktop-width) {
     display: none;

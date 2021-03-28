@@ -1,0 +1,156 @@
+.feedback__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0 50px;
+  padding: 70px 0;
+  background-image: url("../../img/sunset-desktop.jpg");
+  background-position: center left 22px;
+  background-repeat: no-repeat;
+  background-color: $additional-color-two;
+
+  @media (max-width: $desktop-width) {
+    justify-content: center;
+    margin: 76px 0 20px;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 20px 0;
+    padding: 0;
+    background-image: none;
+  }
+}
+
+.feedback__form {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 656px;
+  height: 315px;
+  padding: 50px 50px;
+  background-color: $additional-color-one;
+  box-shadow: 0 4px 30px rgba($additional-color-four, 0.1);
+  border-radius: 5px;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    height: auto;
+    padding: 51px 15px 46px;
+    background-color: $additional-color-two;
+    box-shadow: none;
+  }
+}
+
+.feedback__title {
+  margin: 0 0 10px;
+  font-size: 25px;
+  line-height: 32px;
+  font-weight: 600;
+
+  @media (max-width: $desktop-width) {
+    margin: 0 0 10px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 0 0 20px;
+    text-align: center;
+  }
+}
+
+.feedback__text {
+  margin: 0 0 25px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 0 18px;
+    text-align: center;
+  }
+}
+
+.feedback__fieldset {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 0 25px;
+  padding: 0;
+  border: 0;
+
+  @media (max-width: $desktop-width) {
+    margin: 0 0 20px;
+  }
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+}
+
+.feedback__label {
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 0 20px;
+  }
+
+  &--required {
+    &::before {
+      content: "*";
+      position: absolute;
+      top: 2px;
+      left: 17px;
+      color: $secondary-color-one;
+    }
+
+    &::after {
+      content: "+7";
+      position: absolute;
+      top: 15px;
+      left: 27px;
+      font-size: 14px;
+      line-height: 17.07px;
+      color: $primari-color-one;
+    }
+  }
+}
+
+.feedback__input {
+  box-sizing: border-box;
+  width: 269px;
+  padding: 15px;
+  font-size: 14px;
+  line-height: 17.07px;
+  font-weight: 400;
+  appearance: textfield;
+
+  @media (max-width: $tablet-width) {
+    width: 288px;
+  }
+
+  &::placeholder {
+    color: $primari-color-one;
+  }
+
+  &--required {
+    padding-left: 50px;
+  }
+}
+
+.feedback__button {
+  width: 176px;
+  padding: 18px 40px;
+
+  @media (max-width: $desktop-width) {
+    width: 250px;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 288px;
+  }
+}

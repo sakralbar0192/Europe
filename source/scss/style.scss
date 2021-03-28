@@ -2,6 +2,8 @@
 @import "global/variables.scss";
 @import "global/fonts.scss";
 @import "global/page.scss";
+@import "global/visually-hidden.scss";
+@import "blocks/button.scss";
 @import "blocks/main-header.scss";
 @import "blocks/page-main.scss";
 @import "blocks/places.scss";
@@ -10,4 +12,6 @@
 @import "blocks/tab.scss";
 @import "blocks/prices.scss";
 @import "blocks/tariff.scss";
-@import "blocks/button.scss";
+@import "blocks/feedback.scss";
+@import "blocks/main-footer.scss";
+
