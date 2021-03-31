@@ -1,8 +1,15 @@
 .places {
+  max-width: 1280px;
+
   @media (max-width: $desktop-width) {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 0 73px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 0 0 5px;
   }
 }
 

@@ -19,19 +19,27 @@
       </a>
     </div>
     <nav class="main-header__main-nav">
-      <div class="main-header__main-nav-button-wrapper">
-        <button class="main-header__main-nav-button" type="button"></button>
-      </div>
-      <ul class="main-header__list">
+      <button class="main-header__main-nav-toggle" type="button" id="toggle"></button>
+      <ul class="main-header__list" id="menu">
         <li class="main-header__list-item">
-          <a href="#places" class="main-header__link">О путешествии</a>
+          <a href="#places" class="main-header__link">
+            О путешествии
+            <svg class="main-header__svg main-header__svg--menu" width="25" height="25">
+              <use xlink:href="img/sprite.svg#ico-arrow-right"></use>
+            </svg>
+          </a>
         </li>
         <li class="main-header__list-item">
-          <a href="#prices" class="main-header__link">Цены</a>
+          <a href="#prices" class="main-header__link">
+            Цены
+            <svg class="main-header__svg main-header__svg--menu" width="25" height="25">
+              <use xlink:href="img/sprite.svg#ico-arrow-right"></use>
+            </svg>
+          </a>
         </li>
       </ul>
       <a href="tel:+7(499)-784-684-46" class="main-header__link main-header__link--tel">
-        <svg class="main-header__svg" width="30" height="30">
+        <svg class="main-header__svg main-header__svg--tel" width="30" height="30">
           <use xlink:href="img/sprite.svg#ico-phone"></use>
         </svg>
         +7 (499) -784-684-46</a>
@@ -59,7 +67,7 @@
         <p class="places__text">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
         <ul class="places__list">
           <li class="places__list-item place-card">
-            <a href="#tab-one" class="place-card__link">
+            <a href="#tab-one" class="place-card__link" id="place-card">
               <div class="place-card__hover-wrapper">
                 <p class="place-card__hover-text">смотреть подробнее</p>
               </div>
@@ -75,7 +83,7 @@
             </a>
           </li>
           <li class="places__list-item place-card">
-            <a href="#tab-two" class="place-card__link">
+            <a href="#tab-two" class="place-card__link" id="place-card">
               <div class="place-card__hover-wrapper">
                 <p class="place-card__hover-text">смотреть подробнее</p>
               </div>
@@ -91,7 +99,7 @@
             </a>
           </li>
           <li class="places__list-item place-card">
-            <a href="#tab-three" class="place-card__link">
+            <a href="#tab-three" class="place-card__link" id="place-card">
               <div class="place-card__hover-wrapper">
                 <p class="place-card__hover-text">смотреть подробнее</p>
               </div>
@@ -107,7 +115,7 @@
             </a>
           </li>
           <li class="places__list-item place-card">
-            <a href="#tab-four" class="place-card__link">
+            <a href="#tab-four" class="place-card__link" id="place-card">
               <div class="place-card__hover-wrapper">
                 <p class="place-card__hover-text">смотреть подробнее</p>
               </div>
@@ -123,7 +131,7 @@
             </a>
           </li>
           <li class="places__list-item place-card">
-            <a href="#tab-five" class="place-card__link">
+            <a href="#tab-five" class="place-card__link" id="place-card">
               <div class="place-card__hover-wrapper">
                 <p class="place-card__hover-text">смотреть подробнее</p>
               </div>
@@ -140,30 +148,30 @@
           </li>
         </ul>
       </section>
-      <section class="page-main__tabs tabs" id="tabs">
+      <section class="page-main__tabs tabs">
         <ul class="tabs__list tabs__list--names">
           <li class="tabs__list-item tabs__list-item--names">
-            <a href="#" class="tabs__name-list-link tabs__name-list-link--current">Греция</a>
+            <a href="#" class="tabs__name-list-link tabs__name-list-link--current" id="name">Греция</a>
           </li>
           <li class="tabs__list-item tabs__list-item--names">
-            <a href="#" class="tabs__name-list-link">Албания</a>
+            <a href="#" class="tabs__name-list-link" id="name">Албания</a>
           </li>
           <li class="tabs__list-item tabs__list-item--names">
-            <a href="#" class="tabs__name-list-link">Македония</a>
+            <a href="#" class="tabs__name-list-link" id="name">Македония</a>
           </li>
           <li class="tabs__list-item tabs__list-item--names">
-            <a href="#" class="tabs__name-list-link">Черногория</a>
+            <a href="#" class="tabs__name-list-link" id="name">Черногория</a>
           </li>
           <li class="tabs__list-item tabs__list-item--names">
-            <a href="#" class="tabs__name-list-link">Хорватия</a>
+            <a href="#" class="tabs__name-list-link" id="name">Хорватия</a>
           </li>
         </ul>
-        <ul class="tabs__list">
-          <li class="tabs__list-item tab  tab--current" id="tab-one">
+        <ul class="tabs__list" id="tabs">
+          <li class="tabs__list-item tab tab--current" id="tab-one">
             <div class="tab__text-block">
               <h3 class="tab__title">Греция</h3>
               <p class="tab__text">На севере Греции находится один из крупнейших комплексов монастырей, расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера, царящая в монастырях Метеоры.</p>
-              <a href="#" class="tab__button button">купить тур сейчас</a>
+              <a href="#" class="tab__button button" id="buy-button">купить тур сейчас</a>
             </div>
             <div class="tab__review">
               <div class="tab__image-wrapper">
@@ -193,7 +201,7 @@
             <div class="tab__text-block">
               <h3 class="tab__title">Албания</h3>
               <p class="tab__text">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни, перетёртые до такого мелкого состояния.</p>
-              <a href="#" class="tab__button button">купить тур сейчас</a>
+              <a href="#" class="tab__button button" id="buy-button">купить тур сейчас</a>
             </div>
             <div class="tab__review">
               <div class="tab__image-wrapper">
@@ -223,7 +231,7 @@
             <div class="tab__text-block">
               <h3 class="tab__title">Македония</h3>
               <p class="tab__text">В Македонии нашей целью будет посетить Палаошник, который расположился в удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся на вершину горы Татичев Камен где находится  археологический памятник Кокино в длину около 100 метров.</p>
-              <a href="#" class="tab__button button">купить тур сейчас</a>
+              <a href="#" class="tab__button button" id="buy-button">купить тур сейчас</a>
             </div>
             <div class="tab__review">
               <div class="tab__image-wrapper">
@@ -253,7 +261,7 @@
             <div class="tab__text-block">
               <h3 class="tab__title">Черногория</h3>
               <p class="tab__text">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина каньона составляет 80 км.</p>
-              <a href="#" class="tab__button button">купить тур сейчас</a>
+              <a href="#" class="tab__button button" id="buy-button">купить тур сейчас</a>
             </div>
             <div class="tab__review">
               <div class="tab__image-wrapper">
@@ -283,7 +291,7 @@
             <div class="tab__text-block">
               <h3 class="tab__title">Хорватия</h3>
               <p class="tab__text">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными нерукотворными скульптурами —  сталактитами и сталагмитами —  формировавшимися тысячи и тысячи лет.</p>
-              <a href="#" class="tab__button button">купить тур сейчас</a>
+              <a href="#" class="tab__button button" id="buy-button">купить тур сейчас</a>
             </div>
             <div class="tab__review">
               <div class="tab__image-wrapper">
@@ -341,7 +349,7 @@
               <li class="tariff__feature">Только завтраки в отелях</li>
               <li class="tariff__feature">Экскурсии по удивительно красивым местам Европы</li>
             </ul>
-            <a href="#" class="tariff__button button">купить тур сейчас</a>
+            <a href="#" class="tariff__button button" id="buy-button">купить тур сейчас</a>
           </li>
           <li class="prices__price-list-item tariff">
             <h3 class="tariff__title">
@@ -355,27 +363,27 @@
               <li class="tariff__feature">Завтраки, ужины в отелях и ланчи на природе</li>
               <li class="tariff__feature">Экскурсии по удивительно красивым местам Европы</li>
             </ul>
-            <a href="#" class="tariff__button button">купить тур сейчас</a>
+            <a href="#" class="tariff__button button" id="buy-button">купить тур сейчас</a>
           </li>
         </ul>
       </div>
     </section>
     <section class="page-main__section feedback">
       <div class="feedback__wrapper">
-        <form action="#" method="POST" class="feedback__form">
+        <form action="#" method="POST" class="feedback__form" id="feedback-form">
           <h3 class="feedback__title">У Вас остались вопросы?</h3>
           <p class="feedback__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
           <div class="feedback__fieldset">
             <label class="feedback__label feedback__label--required">
               <span class="visually-hidden">Номер телефона</span>
-              <input type="number" class="feedback__input feedback__input--required" placeholder="Введите 10 цифр номера" required>
+              <input type="number" class="feedback__input feedback__input--required" name="phone-number" placeholder="Введите 10 цифр номера" required>
             </label>
             <label class="feedback__label">
               <span class="visually-hidden">E-mail</span>
-              <input type="email" class="feedback__input" placeholder="E-mail">
+              <input type="email" class="feedback__input" name="email" placeholder="E-mail">
             </label>
           </div>
-          <button class="feedback__button button" type="submit">Отправить</button>
+          <button class="feedback__button button" type="submit"">Отправить</button>
         </form>
       </div>
     </section>
@@ -474,5 +482,30 @@
       </div>
     </div>
   </footer>
+  <section class="modal" id="modal">
+    <div class="modal__overlay" id="modal-overlay"></div>
+    <div class="modal__container">
+      <button class="modal__close-button" id="modal-close-button"></button>
+      <div class="modal__wrapper modal__wrapper--message" id="modal-message">
+        <p class="modal__message-text">Форма успешно отправлена, спасибо! :)</p>
+      </div>
+      <div class="modal__wrapper modal__wrapper--form" id="modal-form-wrapper">
+        <form action="#" method="post" class="modal__form" id="modal-form">
+          <h3 class="modal__title">Купить тур</h3>
+          <label class="modal__label modal__label--required">
+            <span class="visually-hidden">Номер телефона</span>
+            <input type="number" class="modal__input modal__input--required" name="phone-number" placeholder="Введите 10 цифр номера" required id="form-field">
+          </label>
+          <label class="modal__label" id='form-label'>
+            <span class="visually-hidden">E-mail</span>
+            <input type="email" class="modal__input" name="email" placeholder="E-mail" id="form-field">
+          </label>
+          <button class="modal__button button" type="submit" id="modal-submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+  </section>
+  <script src="js/main.js" type="module"></script>
 </body>
 </html>
